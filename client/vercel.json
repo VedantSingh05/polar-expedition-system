@@ -3,6 +3,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://polar-expedition-qyylyooyo-polarexpedtion.vercel.app/api/:path*"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
     }
   ]
 }
