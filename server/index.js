@@ -7,7 +7,12 @@ const { db } = require('./db/database'); // to pass to seed
 
 const app = express();
 
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://polar-expedition-system.vercel.app'
+  ]
+}));
 app.use(express.json());
 
 // Initialize DB
