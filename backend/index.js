@@ -49,4 +49,17 @@ app.use('/api/stats', require('./routes/stats.routes'));
 app.use('/api/expeditions', require('./routes/expeditions.routes'));
 app.use('/api/personnel', require('./routes/personnel.routes'));
 app.use('/api/cargo', require('./routes/cargo.routes'));
-app.use('/api/inventory',
+app.use('/api/inventory', require('./routes/inventory.routes'));
+app.use('/api/emergency', require('./routes/emergency.routes'));
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`
+  _   _  ____ ____   ___  ____  
+ | \\ | |/ ___|  _ \\ / _ \\|  _ \\ 
+ |  \\| | |   | |_) | | | | |_) |
+ | |\\  | |___|  __/| |_| |  _ < 
+ |_| \\_|\\____|_|    \\___/|_| \\_\\
+                                
+NCPOR POLAR COMMAND — Server running on port ${PORT}`);
+});
