@@ -1,6 +1,9 @@
 {
   "name": "polar-expedition-backend",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=22.5.0"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js"
